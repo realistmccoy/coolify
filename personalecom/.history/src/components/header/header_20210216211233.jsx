@@ -9,15 +9,8 @@ const Header = () => {
         <Link to='/'> Nomad</Link>
       </div>
       <ul>
-        <li>
-        <Link to='/'> Home</Link>
-        </li>
-        <li>
-        <Link to='/shop'> Shop</Link>
-        </li>
+        <Li
       </ul>
     </nav>
   )
 }
-
-export default Header

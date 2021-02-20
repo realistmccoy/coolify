@@ -13,11 +13,9 @@ const Header = () => {
         <Link to='/'> Home</Link>
         </li>
         <li>
-        <Link to='/shop'> Shop</Link>
+        <Link to='/'> Shop</Link>
         </li>
       </ul>
     </nav>
   )
 }
-
-export default Header
