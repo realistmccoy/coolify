@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './components/home-page';
 import NotFound from './components/not-found';
-import Shop from './components/pages/shop/shop';
+import Shop from './components/';
 import './App.scss';
 
 //404
@@ -10,7 +10,6 @@ function App() {
 		<div className='App'>
 			<Switch>
 				<Route exact path='/' component={HomePage} />
-				<Route exact path='/shop' component={Shop} />
 				<Route path='*' component={NotFound} />
 			</Switch>
 		</div>

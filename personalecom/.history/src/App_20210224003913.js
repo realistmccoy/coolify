@@ -10,7 +10,6 @@ function App() {
 		<div className='App'>
 			<Switch>
 				<Route exact path='/' component={HomePage} />
-				<Route exact path='/shop' component={Shop} />
 				<Route path='*' component={NotFound} />
 			</Switch>
 		</div>

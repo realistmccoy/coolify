@@ -10,8 +10,8 @@ const SHOP_DATA = [
 		id: 2,
 		title: 'Wedding Photography',
 		description: 'A custom photography session before the official wedding event',
-		imageUrl: 'https://i.redd.it/5tt1x399k8631.jpg',
-		price: 800,
+		imageUrl: '../assets/2169842.svg',
+		price: 150,
 	},
 ];
 
