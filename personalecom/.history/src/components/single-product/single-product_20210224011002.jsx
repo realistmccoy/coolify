@@ -9,9 +9,8 @@ const SingleProduct = (match, history) => {
   const {id} = match.params;
   const [product, setProduct] = useState(null)
   useEffect(() => {
-    const product = products.find(item => Number(item.id) === Number(id))  
+    const product = products.find(id)  
   })
-
   return (
     <div>
 
