@@ -11,7 +11,6 @@ const SingleProduct = ({match, history: {push}}) => {
   const {products} = useContext(ProductsContext)
   const {id} = match.params;
   const [product, setProduct] = useState(null)
-  
   useEffect(() => {
     const product = products.find(item => Number(item.id) === Number(id))  
 
@@ -48,7 +47,8 @@ const SingleProduct = ({match, history: {push}}) => {
             <h3>{title}</h3>
             <p>{price}</p>
           </div>
-          <div className='add-to-cart-btns'>
+        </div>
+        <div className='add-to-cart-btns'>
           <Button className="button is-white nomad-btn" id='btn-white-outline'
           variant="contained"
           >
@@ -58,13 +58,12 @@ const SingleProduct = ({match, history: {push}}) => {
           variant="contained"
          >
           Checkout
-          </Button>
+        </Button>
         </div>
         <div className='product-description'>
           <p>
             {description}
           </p>
-        </div>
         </div>
       </div>
     </Layout>

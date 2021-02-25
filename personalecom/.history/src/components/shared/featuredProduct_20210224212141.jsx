@@ -19,4 +19,4 @@ const FeatureProduct = (props) => {
   )
 }
 
-export default withRouter(FeatureProduct)
+export default FeatureProduct

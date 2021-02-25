@@ -11,7 +11,6 @@ const SingleProduct = ({match, history: {push}}) => {
   const {products} = useContext(ProductsContext)
   const {id} = match.params;
   const [product, setProduct] = useState(null)
-  
   useEffect(() => {
     const product = products.find(item => Number(item.id) === Number(id))  
 
@@ -60,11 +59,12 @@ const SingleProduct = ({match, history: {push}}) => {
           Checkout
           </Button>
         </div>
+        </div>
+        
         <div className='product-description'>
           <p>
             {description}
           </p>
-        </div>
         </div>
       </div>
     </Layout>

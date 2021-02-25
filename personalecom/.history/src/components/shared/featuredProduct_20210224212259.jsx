@@ -7,7 +7,7 @@ const FeatureProduct = (props) => {
 
   return (
     <div className="featureProduct">
-      <div className="featureImage" onClick={() => history.push(`/product/${id}`)}>
+      <div className="featureImage" onClick={() => history.`push(`/product/${id}`)}>
         <img src={imageUrl} alt='product' />
         <div className="namePrice">
           <h3>{title}</h3>

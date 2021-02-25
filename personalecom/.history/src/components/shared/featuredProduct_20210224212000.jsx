@@ -2,12 +2,12 @@ import React from 'react';
 import { withRouter} from 'react-router-dom'
 import './featureProduct.styles.scss';
 
-const FeatureProduct = (props) => {
-  const {title, imageUrl, price, history, id} = props;
+const FeatureProduct = (product) => {
+  const {title, imageUrl, price} = product;
 
   return (
     <div className="featureProduct">
-      <div className="featureImage" onClick={() => history.push(`/product/${id}`)}>
+      <div className="featureImage" onClick={this.}>
         <img src={imageUrl} alt='product' />
         <div className="namePrice">
           <h3>{title}</h3>
@@ -19,4 +19,4 @@ const FeatureProduct = (props) => {
   )
 }
 
-export default withRouter(FeatureProduct)
+export default FeatureProduct
