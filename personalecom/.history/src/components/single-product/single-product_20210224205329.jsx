@@ -20,7 +20,7 @@ const SingleProduct = ({match, history: {push}}) => {
   })
 
   //while we check for product
-  if(!product) {
+  if(!product) 
     return  (
       <Loader
         type="Puff"
@@ -29,9 +29,7 @@ const SingleProduct = ({match, history: {push}}) => {
         width={100}
         timeout={3000} //3 secs
       />
-    )
-  }
-    
+  
 
   const {imageUrl, title, price, description} = product;
   return (

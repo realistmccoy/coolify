@@ -3,7 +3,6 @@ import {withRouter} from 'react-router-dom'
 import {ProductsContext} from '../../context/productContext'
 import Layout from '../shared/layout'
 import './single-product.styles.scss'
-import Loader from "react-loader-spinner";
 
 const SingleProduct = ({match, history: {push}}) => {
   const {products} = useContext(ProductsContext)
@@ -18,21 +17,10 @@ const SingleProduct = ({match, history: {push}}) => {
     }
     setProduct(product)
   })
-
-  //while we check for product
+  //i
   if(!product) {
-    return  (
-      <Loader
-        type="Puff"
-        color="#00BFFF"
-        height={100}
-        width={100}
-        timeout={3000} //3 secs
-      />
-    )
+    return null
   }
-    
-
   const {imageUrl, title, price, description} = product;
   return (
     <Layout>

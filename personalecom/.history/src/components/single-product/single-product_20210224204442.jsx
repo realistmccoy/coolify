@@ -3,7 +3,6 @@ import {withRouter} from 'react-router-dom'
 import {ProductsContext} from '../../context/productContext'
 import Layout from '../shared/layout'
 import './single-product.styles.scss'
-import Loader from "react-loader-spinner";
 
 const SingleProduct = ({match, history: {push}}) => {
   const {products} = useContext(ProductsContext)
@@ -12,27 +11,12 @@ const SingleProduct = ({match, history: {push}}) => {
   useEffect(() => {
     const product = products.find(item => Number(item.id) === Number(id))  
 
-    //if product doesnt exist, redirect to shop page
     if (!product) {
       return push('/shop');
     }
+
     setProduct(product)
   })
-
-  //while we check for product
-  if(!product) {
-    return  (
-      <Loader
-        type="Puff"
-        color="#00BFFF"
-        height={100}
-        width={100}
-        timeout={3000} //3 secs
-      />
-    )
-  }
-    
-
   const {imageUrl, title, price, description} = product;
   return (
     <Layout>
@@ -41,20 +25,20 @@ const SingleProduct = ({match, history: {push}}) => {
           <img src={imageUrl} alt='product' />
         </div>
         <div className='product-details'>
-          <div className='name-price'>
+          <div className='App'>
             <h3>{title}</h3>
             <p>{price}</p>
           </div>
         </div>
-        <div className='add-to-cart-btns'>
-          <button className="button is-white nomad-btn" id='btn-white-outline'>
+        <div>
+          <button>
             ADD TO CART
           </button>
-          <button className="button is-black nomad-btn" id='btn-white-outline'>
+          <button>
             PROCEED TO CHECKOUT
           </button>
         </div>
-        <div className='product-description'>
+        <div>
           <p>
             {description}
           </p>
@@ -65,4 +49,4 @@ const SingleProduct = ({match, history: {push}}) => {
 
 }
 
-export default withRouter(SingleProduct)
+export default SingleProduct
