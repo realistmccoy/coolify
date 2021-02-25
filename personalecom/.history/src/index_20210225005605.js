@@ -11,7 +11,7 @@ ReactDOM.render(
 <BrowserRouter>
 <ProductsContextProvider>
   <CartContextProvider>
-  <App />
+
   </CartContextProvider>
 </ProductsContextProvider>
 

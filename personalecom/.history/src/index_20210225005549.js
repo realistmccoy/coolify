@@ -10,9 +10,7 @@ import CartContextProvider from './context/cart-context'
 ReactDOM.render(
 <BrowserRouter>
 <ProductsContextProvider>
-  <CartContextProvider>
-  <App />
-  </CartContextProvider>
+<App />
 </ProductsContextProvider>
 
 </BrowserRouter>
