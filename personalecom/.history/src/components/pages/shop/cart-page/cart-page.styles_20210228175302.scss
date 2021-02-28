@@ -1,0 +1,30 @@
+.cart-item {
+  text-align: center;
+  border: 1px solid grey;
+  margin: 2rem;
+  padding: 1rem;
+
+  .item-image {
+    img {
+      width:50px;
+    }
+
+  }
+
+  .name-price {
+    h4 {
+      margin: 0;
+    }
+    p {
+      font-size: 1rem;
+      font-weight:normal;
+    }
+  }
+
+  .btns-container {
+    button {
+      border: none;
+      padding:0.5rem 
+    }
+  }
+}
