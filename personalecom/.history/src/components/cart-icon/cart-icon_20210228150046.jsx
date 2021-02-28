@@ -5,7 +5,7 @@ import './cart-icon.styles.scss'
 
 const CartIcon = () => {
   const {itemCount, cartItems} = useContext(CartContext)
-  console.log('CartItems:', cartItems)
+  console.log('car')
   return (
     <div className="cart-container">
       <img src={shoppingBag} alt='shopping-cart-icon' />

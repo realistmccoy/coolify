@@ -20,21 +20,17 @@ const FeatureProduct = (props) => {
             <p>$ {price}</p>
             {
               !isInCart(product, cartItems) &&
-              <Button 
+              <button 
               className="button is-black nomad-btn" 
-              id='btn-white-outline'
-          variant="contained"
               onClick={() => addProduct(product)}
-              >ADD TO CART</Button>
+              >ADD TO CART</button>
             }
             {
               isInCart(product, cartItems) && 
-              <Button 
+              <button 
               className="button is-white nomad-btn" 
-              id='btn-white-outline'
-          variant="contained"
               onClick={() => {}}>
-                ADD MORE</Button>
+                ADD MORE</button>
             }
             
         

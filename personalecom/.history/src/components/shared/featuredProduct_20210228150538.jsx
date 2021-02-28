@@ -22,8 +22,6 @@ const FeatureProduct = (props) => {
               !isInCart(product, cartItems) &&
               <Button 
               className="button is-black nomad-btn" 
-              id='btn-white-outline'
-          variant="contained"
               onClick={() => addProduct(product)}
               >ADD TO CART</Button>
             }
@@ -31,8 +29,6 @@ const FeatureProduct = (props) => {
               isInCart(product, cartItems) && 
               <Button 
               className="button is-white nomad-btn" 
-              id='btn-white-outline'
-          variant="contained"
               onClick={() => {}}>
                 ADD MORE</Button>
             }

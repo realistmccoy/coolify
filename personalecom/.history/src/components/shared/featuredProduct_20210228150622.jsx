@@ -31,8 +31,6 @@ const FeatureProduct = (props) => {
               isInCart(product, cartItems) && 
               <Button 
               className="button is-white nomad-btn" 
-              id='btn-white-outline'
-          variant="contained"
               onClick={() => {}}>
                 ADD MORE</Button>
             }
