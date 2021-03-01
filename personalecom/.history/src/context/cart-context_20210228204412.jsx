@@ -7,7 +7,8 @@ const cartFromStorage = localStorage.getItem('cart')
 	? JSON.parse(localStorage.getItem('cart'))
 	: [];
 
-const initialState = { cartItems: cartFromStorage, ...sumItems(cartFromStorage) };
+
+const initialState = { cartItems: [cartFromStorage], itemCount: 0, total: 0 };
 
 const CartContextProvider = ({children}) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);

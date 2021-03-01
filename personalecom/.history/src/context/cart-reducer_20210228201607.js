@@ -1,14 +1,9 @@
-//makes the data presistent in the web browser window
-const storeCartItems = (cartItems) => {
-	const cart = cartItems.length > 0 ? cartItems : [];
-	localStorage.setItem('cart', JSON.stringify(cart));
-}
+//
 
 export const sumItems = (cartItems) => {
-	storeCartItems(cartItems);
 	return {
-		itemCount: cartItems.reduce((total, prod) => total + prod.quantity, 0),
-		total: cartItems.reduce((total, prod) => total + prod.price * prod.quantity, 0),
+		itemCount: cartItems.reduce((total, product) => total + product.quantity, 0),
+		total: cartItems.reduce((total, product) => total + product.price * product.quantity, 0),
 	};
 };
 
@@ -59,7 +54,6 @@ const cartReducer = (state, action) => {
 				...sumItems(newCartItems),
 			};
 			case 'CLEAR':
-				localStorage.removeItem('cart');
 			return {
 				cartItems: [], 
 				itemCount: 0,

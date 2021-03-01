@@ -7,6 +7,7 @@ const cartFromStorage = localStorage.getItem('cart')
 	? JSON.parse(localStorage.getItem('cart'))
 	: [];
 
+  // ...sumItems(cartFromStorage) 
 const initialState = { cartItems: cartFromStorage, ...sumItems(cartFromStorage) };
 
 const CartContextProvider = ({children}) => {
