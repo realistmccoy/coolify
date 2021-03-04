@@ -25,4 +25,3 @@ export async function fetchFromAPI(endpoint, opts) {
     throw new Error(res.statusText);
   }
 }
-

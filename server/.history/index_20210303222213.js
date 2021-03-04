@@ -4,7 +4,6 @@ require('dotenv').config({ path: './.env' });
 const createCheckoutSession = require('./api/checkout');
 const webhook = require('./api/webhook');
 const paymentIntent = require('./api/paymentintent');
-const decodeJWT = require('./auth/decodeJWT');
 
 const app = express();
 const port = 8080;
@@ -16,7 +15,7 @@ app.use(
 );
 app.use(cors({ origin: true }));
 
-app.use(decodeJWT);
+app.use(decode)
 
 app.get('/', (req, res) => res.send('Hello world'));
 
@@ -27,3 +26,4 @@ app.post('/create-payment-intent', paymentIntent);
 app.post('/webhook', webhook);
 
 app.listen(port, () => console.log('server listening on port', port));
+ 

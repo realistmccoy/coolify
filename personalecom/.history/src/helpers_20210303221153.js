@@ -15,8 +15,8 @@ export async function fetchFromAPI(endpoint, opts) {
 		...(body && { body: JSON.stringify(body) }),
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: `Bearer ${token}`,
-		},
+			Authorization: `Bearer &{token}`,
+		}
   });
 
   if (res.status === 200) {
@@ -25,4 +25,3 @@ export async function fetchFromAPI(endpoint, opts) {
     throw new Error(res.statusText);
   }
 }
-
