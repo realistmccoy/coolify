@@ -1,0 +1,16 @@
+.grid {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: calc(50vw - 160px);
+
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: calc(50vw - 160px);
+    height: 1px;
+  }
+
+  
+}

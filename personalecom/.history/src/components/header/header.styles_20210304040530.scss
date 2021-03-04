@@ -1,0 +1,134 @@
+// .nav-menu {
+//   display: flex;
+//   padding: 1rem;
+//   a {
+//     text-decoration: none;
+//     &:focus, &:hover, &:visited{
+//       color: black;
+//     }
+//   }
+//   .logo{
+//     font: size 1.5rem;
+//   }
+//   ul{
+//     list-style: none;
+//     margin: 0;
+//     margin-left: auto;
+
+//     li{
+//       display: inline-block;
+//       margin: 0 1rem;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+  a {
+    text-decoration: none;
+    &:focus, &:hover, &:visited{
+      color:white;
+    }
+  }
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: black;
+}
+.logo {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+.nav-link {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  list-style: none;
+}
+.nav-link li {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+.nav-link li::after {
+  content: "";
+  border-bottom: solid white;
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: -5px;
+  transition: all 1s;
+}
+.nav-link li:hover::after {
+  width: 100%;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: whitesmoke;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-link {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .nav-link {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    top: 8vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    transform: translate(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .burger {
+    display: block;
+  }
+  .nav-ativ {
+    transform: translateX(0%);
+  }
+  .togle .line1 {
+    background-color: red;
+    transform: rotate(-45deg) translate(-5px, 4px);
+  }
+  .togle .line2 {
+    opacity: 0;
+  }
+  .togle .line3 {
+    background-color: red;
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  .togle .line4 {
+    opacity: 0;
+  }
+}
